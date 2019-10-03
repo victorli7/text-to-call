@@ -1,0 +1,5 @@
+{% autoescape true %}
+<Response>
+	<Say voice="alice">{{ child.message }}</Say>
+</Response>
+{% endautoescape %}

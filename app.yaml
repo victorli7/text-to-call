@@ -1,0 +1,24 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  script: main.app
+  secure: always
+- url: /message
+  script: message.app
+  secure: always
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+
+env_variables:
+  twilio_sid: "" # Twilio AccountSid
+  twilio_secret: "" # Twilio AuthToken
+  recaptcha_site: "" # reCAPTCHA site key
+  recaptcha_secret: "" # reCAPTCHA secret key
+  caller_id: "" # Outbound caller id in E.164 format
